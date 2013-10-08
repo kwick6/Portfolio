@@ -7,6 +7,14 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
+group :development, :test do
+  gem "minitest-rails"
+end
+
+group :test do
+  gem "minitest-rails-capybara"
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
