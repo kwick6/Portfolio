@@ -8,4 +8,7 @@ feature "CanAccessHome" do
     visit "http://localhost:3000/"
     page.text.must_include "My Portfolio"
   end
+  scenario "it works" do
+    puts "The homepage is working"
+  end
 end
