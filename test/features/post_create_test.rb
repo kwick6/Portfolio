@@ -6,15 +6,14 @@ feature "creating a post" do
     #clicks a button that says create new post
     visit posts_path
     click_on "New Post"
-    fill_in 'Title', with: 'a new hope'
-    fill_in 'Content', with: 'a long time ago far far away'
+    fill_in 'Title', with: posts(:cr).title
+    fill_in 'Content', with: posts(:cr).content
 
     # When I submit the form
     click_on 'Create Post'
 
     # Then I should see the post
-    page.text.must_include 'a new hope'
-    page.text.must_include 'a long time ago'
+    page.text.must_include posts(:cr).title
 
     # And a success message
     page.text.must_include 'Post was successfully created'
