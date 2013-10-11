@@ -1,14 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
+<h1><%= @post.title %></h1>
+    <h6>10/11/13</h6>
+    <td><%= @post.content %></td>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

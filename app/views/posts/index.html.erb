@@ -1,17 +1,9 @@
-<h1>Listing posts</h1>
-
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @posts.each do |post| %>
   <tr id="<%= dom_id(post) %>">
-    <td><%= post.title %></td>
+    <h1><%= link_to post.title, post %></h1>
+    <h6>10/11/13</h6>
     <td><%= post.content %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
