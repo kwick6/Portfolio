@@ -2,8 +2,7 @@
 
 <% @posts.each do |post| %>
   <tr id="<%= dom_id(post) %>">
-    <h1><%= link_to post.title, post %></h1>
-    <h6>10/11/13</h6>
+    <td><%= link_to post.title, post %></td>
     <td><%= post.content %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
@@ -11,7 +10,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
