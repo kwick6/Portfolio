@@ -14,14 +14,18 @@ end
 gem 'pg'
 
 group :development, :test do
+  gem 'minitest', '> 4.0'
   gem 'minitest-rails'
+  gem 'sqlite3'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-focus'
+  gem 'minitest-colorize'
+  gem 'capybara-webkit'
 end
 
 group :test do
-  gem 'minitest-rails-capybara'
   gem 'turn'
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
