@@ -62,6 +62,8 @@ module Portfolio
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    #config.assets.paths += Dir["#{Rails.root}/vendor/asset-libs/*"].sort_by { |dir| -dir.size }
+
     config.generators do |g|
         g.test_framework :mini_test, :spec => true
         g.helper false

@@ -1,71 +1,255 @@
+
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <div class="navbar-brand"><%= link_to 'Home', root_path %></div>
-  </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><%= link_to 'Blog', posts_path %></li>
-      <li><%= link_to 'Projects', projects_path %></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
+
+<body>
+
+<div class="container tab-container" id="tab-container" >
+
+<header>
+
+<div class="cover" style="background-image: url(<%= asset_path 'nyc-subway.jpg' %>)">
+
+<div class="coverOverlay"></div>
+
+
+<div class="profileName">
+
+<h1>Underground Rails</h1>
+
+<p></p>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul class="etabs">
+
+<li class="tab"><%= link_to 'Home', root_path %><span class="tabIcon glyphicon glyphicon-envelope"></span><span class="tabText"></span></a></li>
+
+<li class="tab"><%= link_to 'Portfolio', projects_path %><span class="tabIcon glyphicon glyphicon-briefcase"></span><span class="tabText"></span></a></li>
+
+<li class="tab"><%= link_to 'Blog', posts_path %><span class="tabIcon glyphicon glyphicon-pencil"></span><span class="tabText"></span></a></li>
+
+
+</ul>
+
 </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-7"><h1 class="intro"><%= yield %></h1></div>
-      <div class="col-md-3">
-        <div class="well">
-        <h2>About Me</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </div>
-    </div>
-  </div>
+</header>
+
+<!-- HEADER -->
+
+
+
+<!-- MAIN CONTENT -->
+
+<div class="content">
+
+<!-- ABOUT TAB -->
+
+<div id="about">
+
+<div class="row">
+
+<!-- About - Left Side -->
+
+<div class="col-lg-4">
+
+<!-- Personal Info -->
+
+<div class="panel">
+
+<div class="panel-heading">Personal Info</div>
+
+<ul class="personalInfo">
+
+<li><span class="icon glyphicon glyphicon-briefcase"></span><span class="text">Job : Rails Developer</span><div class="clearfix"></div></li>
+
+<li><span class="icon glyphicon glyphicon-map-marker"></span><span class="text">From : Seattle, Washington</span><div class="clearfix"></div></li>
+
+<li><span class="icon glyphicon glyphicon-phone"></span><span class="text">Phone : 206-856-2891</span><div class="clearfix"></div></li>
+
+<li><span class="icon glyphicon glyphicon-envelope"></span><span class="text">Email : scottjgolembiewski@gmail.com</span><div class="clearfix"></div></li>
+
+<li><span class="icon glyphicon glyphicon-globe"></span><span class="text">Website : <a href="#">www.undergroundrails.com</a></span><div class="clearfix"></div></li>
+
+</ul>
+
+</div>
+
+<!-- Personal Info -->
+
+
+
+<!-- Skill - Progress bar -->
+
+<div class="panel">
+
+<div class="panel-heading">Development Skills</div>
+
+<div class="progressSkill">
+
+<p>Web Design</p>
+
+<div class="progress">
+
+<div class="progress-bar progress-bar-info" style="width: 20%"></div>
+
+</div>
+
+</div>
+
+
+
+<div class="progressSkill">
+
+<p>Web Development</p>
+
+<div class="progress">
+
+<div class="progress-bar progress-bar-info" style="width: 40%"></div>
+
+</div>
+
+</div>
+
+
+
+<div class="progressSkill">
+
+<p>Logo Design</p>
+
+<div class="progress">
+
+<div class="progress-bar progress-bar-info" style="width: 50%"></div>
+
+</div>
+
+</div>
+
+
+
+<div class="progressSkill">
+
+<p>Illustration</p>
+
+<div class="progress">
+
+<div class="progress-bar progress-bar-info" style="width: 30%"></div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="col-lg-8">
+
+<div class="panel">
+
+<div class="panel-heading"></div>
+
+<%= yield %>
+
+</div>
+
+<div class="panel">
+
+<div class="panel-heading">Education Background</div>
+
+
+
+<div class="media history">
+
+<div class="media-body">
+
+<div class="historyTop">
+
+<div class="media-object historyDate"> 2013</div>
+
+<h6 class="media-heading historyHeading">Code Fellows - Seattle WA</h6>
+
+</div>
+
+<span class="icon glyphicon glyphicon-map-marker historyLocationicon"></span>
+
+<p class="historyLocationtext">Code Fellows - Ruby on Rails Bootcamp</p>
+
+<p>9 weeks of Ruby on Rails training</p>
+
+</div>
+
+</div>
+
+
+
+<div class="media history">
+
+<div class="media-body">
+
+<div class="historyTop">
+
+<div class="media-object historyDate"> 2007-2008</div>
+
+<h6 class="media-heading historyHeading">Albers School of Business - Seattle University </h6>
+
+</div>
+
+<span class="icon glyphicon glyphicon-map-marker historyLocationicon"></span>
+
+<p class="historyLocationtext">Seattle, WA</p>
+
+<p>Attended Seattle University to obtain a business degree, left Junior year to follow an entrepreneurial path in web applications. </p>
+
+</div>
+
+</div>
+
+
+
+<div class="media history">
+
+<div class="media-body">
+
+<div class="historyTop">
+
+<div class="media-object historyDate"> 2005-2007</div>
+
+<h6 class="media-heading historyHeading">Associates Degree - Applied Science</h6>
+
+</div>
+
+<span class="icon glyphicon glyphicon-map-marker historyLocationicon"></span>
+
+<p class="historyLocationtext">Henry Ford Community College</p>
+
+<p>Earned an AA in Applied Science</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </body>
+
 </html>

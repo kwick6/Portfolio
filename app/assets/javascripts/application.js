@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+//= require modernizr.custom.js
+//= require custom.js
+//= require jquery.1.10.2.js
