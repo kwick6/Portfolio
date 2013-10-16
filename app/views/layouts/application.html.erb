@@ -11,6 +11,8 @@
 
 <body>
 
+
+
 <div class="container tab-container" id="tab-container" >
 
 <header>
@@ -40,8 +42,16 @@
 
 <li class="tab"><%= link_to 'Blog', posts_path %><span class="tabIcon glyphicon glyphicon-pencil"></span><span class="tabText"></span></a></li>
 
+<li class="tab">
+  <%= render 'devise/menu/registration_items' %><span class="tabIcon glyphicon glyphicon-pencil"></span><span class="tabText"></span>
+</li>
+
+<li class="tab">
+  <%= render 'devise/menu/login_items' %><span class="tabIcon glyphicon glyphicon-pencil"></span><span class="tabText"></span>
+</li>
 
 </ul>
+
 
 </nav>
 
