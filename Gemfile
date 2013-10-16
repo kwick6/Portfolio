@@ -12,6 +12,7 @@ group :development, :test do
 end
 
 gem 'pg'
+gem 'devise'
 
 group :development, :test do
   gem 'minitest', '> 4.0'
