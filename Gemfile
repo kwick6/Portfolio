@@ -15,13 +15,18 @@ gem 'pg'
 gem 'devise'
 
 group :development, :test do
-  gem 'minitest', '> 4.0'
-  gem 'minitest-rails'
+  gem "minitest", "> 4.0"
+  gem "minitest-rails"
   gem 'sqlite3'
-  gem 'minitest-rails-capybara'
-  gem 'minitest-focus'
-  gem 'minitest-colorize'
-  gem 'capybara-webkit'
+  gem "minitest-rails-capybara"
+  gem "minitest-focus"
+  gem "minitest-colorize"
+  gem "capybara-webkit"
+  gem "launchy"
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "pry-debugger"
+  gem "faker"
 end
 
 group :test do
