@@ -1,7 +1,9 @@
 cr:
   title: "Code Rails"
   content: "This is how I learned web development!"
+  published: "true"
 
 cf:
   title: "Becoming a Code Fellow"
   content: "Means striving for excellence."
+  published: "true"

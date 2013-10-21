@@ -1,3 +1,10 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title
+  belongs_to :author, class_name: "User"
+  has_many :comments, as: :commentable
+  scope :published, where(published: true)
+
+  def publish!
+    self.published = true
+    save!
+  end
 end

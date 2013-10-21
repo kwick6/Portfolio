@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @post.title %></h1>
-    <h6>10/11/13</h6>
+
     <td><%= @post.content %></td>
+
+   <%= render "comments/form" %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
