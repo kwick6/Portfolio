@@ -6,7 +6,7 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
-
+gem 'omniauth-twitter'
 group :development, :test do
   gem 'sqlite3'
 end
@@ -15,7 +15,7 @@ gem 'devise'
 gem 'pundit'
 gem 'faker'
 gem 'strong_parameters'
-
+gem 'figaro'
 group :development, :test do
   gem "minitest", "> 4.0"
   gem "minitest-rails"

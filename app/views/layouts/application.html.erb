@@ -56,6 +56,9 @@
   <%= render 'devise/menu/login_items' %><span class="tabIcon glyphicon glyphicon-pencil"></span><span class="tabText"></span>
 </li>
 
+<li class="tab">
+  <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+</li>
 </ul>
 
 

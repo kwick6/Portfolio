@@ -2,9 +2,8 @@ Portfolio::Application.routes.draw do
 
   resources :comments
 
-
-  devise_for :users
-
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+                   controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :posts
 
   resources :projects
