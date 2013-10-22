@@ -1,7 +1,3 @@
-<% if f.object.encrypted_password.present? %>
-  <div class="field"><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
-<% end %>
 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
