@@ -33,6 +33,7 @@ end
 
 group :test do
   gem 'turn'
+  gem 'simplecov', :require => false
 end
 
 # Gems used only for assets and not required
