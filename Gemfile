@@ -10,10 +10,12 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 group :development, :test do
   gem 'sqlite3'
 end
+gem 'pg'
 gem 'devise'
 gem 'pundit'
 gem 'faker'
 gem 'strong_parameters'
+
 group :development, :test do
   gem "minitest", "> 4.0"
   gem "minitest-rails"
