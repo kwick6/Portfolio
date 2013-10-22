@@ -11,13 +11,6 @@
 
 <body>
 
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
-<% end %>
-<% if flash[:alert] %>
-  <%= flash[:alert] %>
-<% end %>
-
 
 <div class="container tab-container" id="tab-container" >
 
@@ -68,7 +61,12 @@
 
 <!-- HEADER -->
 
-
+<br />
+<% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+              <%= value %>
+        </div>
+  <% end %>
 
 <!-- MAIN CONTENT -->
 
