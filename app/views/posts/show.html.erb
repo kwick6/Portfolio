@@ -42,5 +42,7 @@
 <% if current_user %>
   <h4> Add a Comment </h4>
   <%= render '/comments/form' %>
+<% else %>
+  <h6> Please <%= link_to 'sign in via Twitter', user_omniauth_authorize_path(:twitter) %> to leave a comment!</h6>
 <% end %>
 </div>

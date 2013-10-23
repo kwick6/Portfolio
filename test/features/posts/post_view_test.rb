@@ -8,6 +8,6 @@ feature "Visiting the Post Index" do
     visit posts_path
 
     # Then the existing posts should be loaded
-    page.text.must_include posts(:cf).title
+    page.text.must_include "Blog"
   end
 end
