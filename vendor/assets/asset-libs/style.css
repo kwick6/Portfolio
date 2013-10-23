@@ -142,6 +142,24 @@ span.tweet{font-size:12px;color:#777; margin:0; padding:0;min-height:10px;}
 
 ul.tweet_list {list-style-type:none; margin:0; padding:0;}
 ul.tweet_list li {margin:0; padding:0;}
+
+/*
+---------------------------
+COMMENTS
+---------------------------
+*/
+
+
+.comment{background-color: #fff;
+padding: 20px;
+position: relative;
+margin-left: 0px;
+box-shadow: 0 0 1px #dedede;
+font-size: 14px;
+color: #737373;
+border-radius: 3px;
+}
+
 /*
 ---------------------------
 CONTACT

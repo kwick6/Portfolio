@@ -1,34 +1,46 @@
-<p id="notice"><%= notice %></p>
-<br />
-<h1><%= @post.title %></h1>
+<div class="comment">
+<p>
 
-<br />
-<td><%= @post.content %></td>
-<br />
-<br />
-<h4>Comments:</h4>
-<br />
-  <% @post.comments.each do |comment| %>
-    <p>
-      <strong>Name:</strong>
-      <%= comment.author %>
-    </p>
+  <h3><%= @post.title %></h3>
+</p>
+<p><b>10/23/13</b>
+</p>
 
-    <p>
-      <strong>Comment:</strong>
-      <%= comment.content %>
-    </p>
+<p>
+  <%= @post.content %>
+</p>
+<br />
+<% if current_user && current_user.editor? %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+  <% else %>
+<% end %>
+<br />
+<br />
+<ul>
+  <% if @post.comments.any? %>
+    <% @post.comments.each do |comment| %>
+
+      <% if current_user.nil? %>
+        <% if comment.approved %>
+          <%= render comment %>
+        <% end %>
+
+      <% elsif current_user.editor? %>
+        <%= render comment %>
+
+      <% else %>
+        <% if comment.approved %>
+          <%= render comment %>
+        <% end %>
+      <% end %>
+    <% end %>
   <% end %>
+</ul>
 
-<br />
 
-<br />
-<br />
-<h4>Leave A Comment</h4>
-<br />
-<%= render "comments/form" %>
-<br />
-<br />
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% if current_user %>
+  <h4> Add a Comment </h4>
+  <%= render '/comments/form' %>
+<% end %>
+</div>
