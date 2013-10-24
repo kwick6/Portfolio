@@ -6,3 +6,34 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+<br />
+<br />
+<ul>
+  <% if @project.comments.any? %>
+    <% @project.comments.each do |comment| %>
+
+      <% if current_user.nil? %>
+        <% if comment.approved %>
+          <%= render comment %>
+        <% end %>
+
+      <% elsif current_user.editor? %>
+        <%= render comment %>
+
+      <% else %>
+        <% if comment.approved %>
+          <%= render comment %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>
+
+
+<% if current_user %>
+  <h4> Add a Comment </h4>
+  <%= render '/comments/form' %>
+<% else %>
+  <h6> Please <%= link_to 'sign in via Twitter', user_omniauth_authorize_path(:twitter) %> to leave a comment!</h6>
+<% end %>
+</div>

@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :set_project, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:show, :index]
   # GET /projects
   # GET /projects.json
   def index
@@ -15,6 +16,9 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
+    @commentable = @project
+    @comments = @commentable.comments
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -41,7 +45,7 @@ class ProjectsController < ApplicationController
   # PROJECT /projects
   # PROJECT /projects.json
   def create
-    @project = Project.new(params[:project])
+    @project = Project.new(project_params)
 
     respond_to do |format|
       if @project.save
@@ -80,5 +84,16 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url }
       format.json { head :no_content }
     end
+  end
+
+
+private
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
+
+  def project_params
+    params.require(:project).permit(:name, :details, :content, :name, :author_id)
   end
 end
