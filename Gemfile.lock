@@ -154,6 +154,7 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
+    rails-bootstrap-markdown (1.0.0)
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -164,6 +165,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (3.0.0)
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -225,6 +227,8 @@ DEPENDENCIES
   pry-rails
   pundit
   rails (= 3.2.14)
+  rails-bootstrap-markdown
+  redcarpet
   sass-rails (~> 3.2.3)
   simplecov
   sqlite3

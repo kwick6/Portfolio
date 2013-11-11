@@ -16,6 +16,8 @@ gem 'pundit'
 gem 'faker'
 gem 'strong_parameters'
 gem 'figaro'
+gem 'rails-bootstrap-markdown'
+gem 'redcarpet'
 group :development, :test do
   gem "minitest", "> 4.0"
   gem "minitest-rails"

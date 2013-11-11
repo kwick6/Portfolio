@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
-//= require modernizr.custom.js
-//= require custom.js
-//= require jquery.1.10.2.js
+//= require asset-libs/modernizr.custom.js
+//= require asset-libs/custom.js
+//= require asset-libs/jquery.1.10.2.js
+//= require bootstrap-markdown

@@ -11,9 +11,10 @@
  *= require_self
  *= require_tree .
  *= require bootstrap
- *= require bootstrap-glyphicons.css
- *= require bootstrap-responsive.css
- *= require color.css
- *= require normalize.css
- *= require style.css
+ *= require asset-libs/bootstrap-glyphicons.css
+ *= require asset-libs/bootstrap-responsive.css
+ *= require asset-libs/color.css
+ *= require asset-libs/normalize.css
+ *= require asset-libs/style.css
+ *= require bootstrap-markdown
  */
