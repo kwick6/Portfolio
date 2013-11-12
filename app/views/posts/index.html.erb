@@ -5,7 +5,7 @@
       <div class="panel">
         <div class="panel-heading">Blog</div>
         <div class="container">
-          <div class="singlePostFull">
+          <div class="singlePost">
       <% @posts.each do |post| %>
         <tr id="<%= dom_id(post) %>">
           <h4><%= link_to post.title, post %></h4>
