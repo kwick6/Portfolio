@@ -15,7 +15,7 @@ body {font: 12px 'Open Sans', sans-serif;color: #777;text-rendering: optimizeLeg
 p{margin-bottom:0px;line-height:20px;}
 
 
-.container{width:940px;}
+.container{width:940px;padding:15px;}
 .row{}
 
 /*TYPOGRAPHY*/
@@ -113,7 +113,7 @@ BLOG
 ---------------------------
 */
 
-ul.blogCategory{list-style-type:none;padding:0px;margin:0px;}
+ul.blogCategory{list-style-type:none;padding:9px;margin:0px;}
 ul.blogCategory li{padding:0px 0px 10px 0px;margin-bottom:10px;border-bottom:solid 1px #eee;}
 ul.blogCategory li:last-child{margin-bottom:0px!important;padding-bottom:0px!important;border-bottom:none!important;}
 ul.blogCategory li span.icon{width:16px;height:16px;float:left;margin-right:10px;font-size:10px;color:#ccc;padding-top:2px;}

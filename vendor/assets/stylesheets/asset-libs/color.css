@@ -7,7 +7,7 @@ nav{background-color:#FFF; border-color:#d3d6db; border-top:none;}
 .tab a.active {color:#2f6297;background-color:#00b0ce; color:#FFF;}
 .panel{border:solid 1px #d3d6db;}
 .panel .panel-heading{background-color:#323a44; border-bottom-color:#e9eaee; font-weight:600; color:#fff;}
-h1,h2,h3,h4,h5,h6{color:#5d6d7f;}
+h1,h2,h3,h4,h5,h6{color:#00b0ce;}
 .profileName h1{color:#FFF;}
 ul.personalInfo li span.icon{color:#5d6d7f;}
 .descriptionSingle .icon{color:#abb4bd;}

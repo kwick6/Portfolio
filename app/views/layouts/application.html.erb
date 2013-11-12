@@ -12,9 +12,9 @@
 <body>
 
 <div class="container tab-container" id="tab-container" >
-  <header>
+
     <%= render 'layouts/header' %>
-  </header>
+
 
   <!-- Display Flash Message -->
   <% flash.each do |key, value| %>
@@ -23,7 +23,6 @@
     </div>
   <% end %>
   <!-- Display Flash Message -->
-<div class="content">
   <%= yield %>
 </div>
 

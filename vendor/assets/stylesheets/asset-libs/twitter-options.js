@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 jQuery("#lasttweet").tweet({
   join_text: false,
-  username: "envato", // Change username here
+  username: "sc0ttg", // Change username here
   modpath: './js/twitter/',
   avatar_size: false,
   count: 1,
