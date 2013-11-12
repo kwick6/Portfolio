@@ -8,10 +8,10 @@
           <div class="singlePost">
       <% @posts.each do |post| %>
         <tr id="<%= dom_id(post) %>">
-          <h4><%= link_to post.title, post %></h4>
+          <h3><%= link_to post.title, post %></h3>
           <div class="description">
             <div class="descriptionSingle">
-              <span>By: Scott Golembiewski</span>
+              <span><b>&nbsp;By: Scott Golembiewski</b></span>
             </div></div>
             <p><%= markdown(post.content).html_safe %></p><br><br>
           <% if policy(post).update? %>
