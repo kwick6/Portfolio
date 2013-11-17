@@ -1,15 +1,10 @@
 class ProjectsController < ApplicationController
-  before_filter :set_project, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, except: [:show, :index]
+  # before_filter :set_project, only: [:show, :edit, :update, :destroy]
+  # before_filter :authenticate_user!, except: [:show, :index]
   # GET /projects
   # GET /projects.json
   def index
     @projects = Project.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @projects }
-    end
   end
 
   # GET /projects/1
@@ -22,6 +17,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.js
       format.json { render json: @project }
     end
   end
@@ -30,70 +26,56 @@ class ProjectsController < ApplicationController
   # GET /projects/new.json
   def new
     @project = Project.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @project }
-    end
   end
 
   # GET /projects/1/edit
   def edit
     @project = Project.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
   end
 
   # PROJECT /projects
   # PROJECT /projects.json
   def create
-    @project = Project.new(project_params)
-
+    @project = Project.create!(params[:project])
     respond_to do |format|
-      if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render json: @project, status: :created, location: @project }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to projects_url, notice: 'Project was successfully created, Yay!' }
+      format.js   {}
     end
   end
+
 
   # PUT /projects/1
   # PUT /projects/1.json
   def update
     @project = Project.find(params[:id])
-
+    @oroject.update_attributes!(params[:project])
     respond_to do |format|
-      if @project.update_attributes(params[:project])
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to projects_url }
+      format.js
     end
   end
 
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project = Project.find(params[:id])
-    @project.destroy
-
+    @project = Project.destroy(params[:id])
     respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.json { head :no_content }
+      format.html { redirect_to projects_url  }
+      format.js
     end
   end
 
 
-private
+  private
 
-  def set_project
-    @project = Project.find(params[:id])
-  end
+    def set_project
+      @project = Project.find(params[:id])
+    end
 
-  def project_params
-    params.require(:project).permit(:name, :details, :content, :name, :author_id)
+    def project_params
+      params.require(:project).permit(:name, :details, :content, :name, :author_id)
+    end
   end
-end
