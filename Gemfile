@@ -18,6 +18,9 @@ gem 'strong_parameters'
 gem 'figaro'
 gem 'rails-bootstrap-markdown'
 gem 'redcarpet'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'
 group :development, :test do
   gem "minitest", "> 4.0"
   gem "minitest-rails"
