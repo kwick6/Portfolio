@@ -3,7 +3,7 @@
     <h6>10/11/13</h6>
     <td><%= @project.details %></td>
 
-
+<%= image_tag @project.image_url %>
 <%= link_to 'Edit', edit_project_path(@project), id: "edit_link" %> |
 <%= link_to 'Back', projects_path, id: "back_link" %>
 <br />

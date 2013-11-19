@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.create!(params[:project])
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully created, Yay!' }
+      format.html { render :new }
       format.js   {}
     end
   end
