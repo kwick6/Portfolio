@@ -12,6 +12,10 @@ Portfolio::Application.routes.draw do
     resources :comments
   end
 
+  scope ":locale" do
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

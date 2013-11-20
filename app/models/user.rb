@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :time_zone
   # attr_accessible :title, :content
 
   def self.from_omniauth(auth)
@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   end
 end
 
+validates_inclusion_of :time_zone, in: ActiveSupport::TimeZone.zones_map(&:name)
 def self.new_with_session(params, session)
   if session["devise.user_attributes"]
     new(session["devise.user_attributes"], without_protection: true) do |user|

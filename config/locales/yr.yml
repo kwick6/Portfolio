@@ -1,0 +1,6 @@
+yr:
+  time:
+    formats:
+      default: "%d/%m/%Y %I:%M %p"
+      short: "%b %d, %Y %I:%M %p"
+      long: "%B %d, %Y %I:%M %p"

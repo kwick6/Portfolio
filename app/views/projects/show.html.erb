@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @project.name %></h1>
-    <h6>10/11/13</h6>
+    <span class="timestamp">at <%= @project.created_at %></span>
     <td><%= @project.details %></td>
 
 <%= image_tag @project.image_url %>

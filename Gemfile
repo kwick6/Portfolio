@@ -21,6 +21,7 @@ gem 'redcarpet'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+gem 'draper'
 group :development, :test do
   gem "minitest", "> 4.0"
   gem "minitest-rails"

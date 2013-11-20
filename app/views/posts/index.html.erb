@@ -12,6 +12,7 @@
           <div class="description">
             <div class="descriptionSingle">
               <span><b>&nbsp;By: Scott Golembiewski</b></span>
+              <span class="timestamp">at <%= l post.created_at, format: :short %></span>
             </div></div>
             <p><%= markdown(post.content).html_safe %></p><br><br>
           <% if policy(post).update? %>
