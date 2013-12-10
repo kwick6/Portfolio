@@ -8,5 +8,5 @@ $(document).ready ->
   ).bind "ajax:error", (e, xhr, status, error) ->
     $("#new_project").append "<p>ERROR</p>"
 
-$.ajax(url: "/project").done (html) ->
+$.ajax(url: "/projects").done (html) ->
   $("#results").append html

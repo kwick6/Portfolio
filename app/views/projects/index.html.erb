@@ -1,12 +1,12 @@
 
 <h2>Projects</h2>
 
-<%= link_to "New Project", new_project_path, id: "new_link" %>
+<%= link_to "New Project", new_project_path, id: "new_link", :remote => true %>
 
 <div class="projects" id="projects">
-<ul id="projects">
-  <%= render @projects %>
-</ul>
+  <ul id="projects">
+    <%= render @projects %>
+  </ul>
 </div>
 
 <br />

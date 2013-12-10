@@ -40,9 +40,9 @@ class ProjectsController < ApplicationController
   # PROJECT /projects
   # PROJECT /projects.json
   def create
-    @project = Project.create!(params[:project])
+    @project = Project.create(params[:project])
     respond_to do |format|
-      format.html { redirect_to @project }
+      format.html {}
       format.js   {}
     end
   end

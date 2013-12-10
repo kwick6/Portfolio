@@ -11,7 +11,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 gem 'pg'
-gem 'devise'
+gem 'devise',   '~> 3.0.3'
 gem 'pundit'
 gem 'faker'
 gem 'strong_parameters'
@@ -21,6 +21,7 @@ gem 'redcarpet'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+gem 'unf'
 gem 'draper'
 group :development, :test do
   gem "minitest", "> 4.0"
