@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
       { :locale => I18n.locale }
   end
 
+  before_filter :update_sanitized_params, if: :devise_controller?
+
+  def update_sanitized_params
+    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:role, :time_zone, :email, :password)}
+  end
+
   around_filter :user_time_zone, if: :current_user
 
   private

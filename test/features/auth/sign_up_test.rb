@@ -10,6 +10,7 @@ feature("As a site visitor I want to be able to sign up for an account so that I
     fill_in "Email", with: "test@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
+    page.select('(GMT-10:00) Hawaii', :from => 'Time zone')
     click_button "Sign up"
 
     # Then I should be signed up

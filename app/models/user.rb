@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   end
 end
 
-validates_inclusion_of :time_zone, in: ActiveSupport::TimeZone.zones_map(&:name)
+validates_inclusion_of :time_zone, in: ActiveSupport::TimeZone.zones_map(&:to_s)
 def self.new_with_session(params, session)
   if session["devise.user_attributes"]
     new(session["devise.user_attributes"], without_protection: true) do |user|
