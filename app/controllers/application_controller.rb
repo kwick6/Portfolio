@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   include Pundit
   protect_from_forgery
 
+  # around_filter :user_time_zone, if: :current_user
+
   before_filter :set_locale
 
   def set_locale
@@ -18,12 +20,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:role, :time_zone, :email, :password)}
   end
 
-  around_filter :user_time_zone, if: :current_user
-
   private
 
-  def user_time_zone(&block)
-    Time.use_zone(current_user.time_zone, &block)
-  end
+  # def user_time_zone(&block)
+  #   Time.use_zone(current_user.time_zone, &block)
+  # end
 
 end

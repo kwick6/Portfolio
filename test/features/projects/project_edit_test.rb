@@ -11,7 +11,7 @@ feature "As the site owner, I want to edit a project so that I can correct typos
     click_on "Update Project"
 
     # Then the changes should be saved and shown
-    page.text.must_include "successfully"
+    page.text.must_include "Project Updated!"
     page.text.must_include "Rad Portfolio"
     page.text.wont_include "Code Fellows Portfolio"
   end

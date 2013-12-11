@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.create(params[:project])
     respond_to do |format|
-      format.html {}
+      format.html { redirect_to projects_url }
       format.js   {}
     end
   end
@@ -51,12 +51,14 @@ class ProjectsController < ApplicationController
   # PUT /projects/1
   # PUT /projects/1.json
   def update
-    @project = Project.find(params[:id])
-    @oroject.update_attributes!(params[:project])
-    respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.js
-    end
+     @project = Project.find(params[:id])
+     if @project.update_attributes(params[:project])
+      flash[:success] = "Project Updated!"
+      redirect_to @project
+     else
+      format.html { render :edit }
+      format.json { render json: @project.errors, status: :unprocessable_entity }
+     end
   end
 
   # DELETE /projects/1
