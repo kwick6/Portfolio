@@ -7,9 +7,6 @@ gem 'rails', '3.2.14'
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'omniauth-twitter'
-group :development, :test do
-  gem 'sqlite3'
-end
 gem 'pg'
 gem 'devise',   '~> 3.0.3'
 gem 'pundit'
@@ -36,6 +33,7 @@ group :development, :test do
   gem "pry-doc"
   gem "pry-debugger"
   gem "faker"
+  gem "selenium-webdriver"
 end
 
 group :test do
